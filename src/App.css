@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 41px;
+}
+header a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+header a:hover{
+    color: whitesmoke;
+}
+.users-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.users-header button {
+    margin-left: 100px;
+    margin-top: 11px;
+    width: 107px;
+    height: 39px;
+}

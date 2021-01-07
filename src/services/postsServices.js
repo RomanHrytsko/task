@@ -1,9 +1,9 @@
-export class UserService {
+export class PostsServices{
     constructor(httpClient) {
         this.api = httpClient
-        this.baseUrl = 'https://jsonplaceholder.typicode.com/users'
+        this.baseUrl = 'https://jsonplaceholder.typicode.com/posts'
     }
-    getUser(){
+    getPosts(){
         return this.api.get(this.baseUrl)
     }
 

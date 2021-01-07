@@ -1,6 +1,8 @@
 import {httpClient} from "./http-client";
 import {UserService} from "./userService";
+import {PostsServices} from "./postsServices";
 
-export const userService = {
-    userService: new UserService(httpClient)
+export const services = {
+    userService: new UserService(httpClient),
+    postsService: new PostsServices(httpClient)
 }
