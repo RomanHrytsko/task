@@ -1,0 +1,1 @@
+export const GET_USER_POSTS = 'GET_USER_POSTS'

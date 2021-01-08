@@ -9,7 +9,8 @@ export const getPost = () => async (dispatch) => {
 }
 
 export const  getAllUserPosts = (id) => async (dispatch)=>{
-    const response = await postsService.getUserPosts(id)
+    const response = await postsService.getPostInfo(id)
     const json = await response.json()
+    console.log(json)
     dispatch({type: GET_USER_POSTS_API, payload:json})
 }

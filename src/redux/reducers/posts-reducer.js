@@ -1,4 +1,4 @@
-import {GET_POSTS} from "../action-types";
+import {GET_POSTS, GET_USER_POSTS_API} from "../action-types";
 
 const initialState = {
 
@@ -11,7 +11,16 @@ export default (state = initialState, action) => {
 
             return {...state, posts: action.payload}
         }
+        case GET_USER_POSTS_API: {
 
+            const userId = state.posts.filter((el) => el.userId !== action.payload.userId)
+
+            if (state.posts.userId === action.payload.userId) {
+                userId.push(action.payload)
+            }
+
+            return {...state, posts: userId}
+        }
 
         default: {
             return state

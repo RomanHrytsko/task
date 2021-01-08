@@ -1,13 +1,15 @@
-import React, {useEffect} from 'react'
-import {useDispatch} from "react-redux";
-import {getAllUserPosts} from "../../redux";
+import React from 'react'
 import {withRouter} from 'react-router-dom'
 
-const PostsForAllUserPosts = ({match:{params:{id}},post}) =>{
-    const dispatch = useDispatch()
+const PostsForAllUserPosts = ({match: {params: {id}}, post, post: {userId, title, body}}) => {
 
-    return(
+    return (
         <div>
+            <h4>UserId: {userId}</h4>
+            <h4>id: {post.id}</h4>
+            <h4>Title: {title}</h4>
+            <h4>Body: {body}</h4>
+            <hr/>
 
         </div>
     )

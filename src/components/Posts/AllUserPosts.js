@@ -1,22 +1,22 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
-import {getAllUserPosts, getPost} from "../../redux";
+import {getAllUserPosts} from "../../redux";
 import {withRouter} from 'react-router-dom'
+import {getUserPosts} from "../../redux/action-creators/userPosts-action-creator";
 import PostForAllUserPosts from "./PostForAllUserPosts";
-import {getPostInfoById} from "../../redux/action-creators/details-action-creators";
 
 const AllUsersPosts = ({match: {params: {id}}}) =>{
     const dispatch = useDispatch()
-    const {details} = useSelector(({details:{details}}) => ({details}))
+ const {userPosts} = useSelector(({userPosts: {userPosts}})=>({userPosts}))
 useEffect(() =>{
-    dispatch(getPostInfoById(id))
+    dispatch(getUserPosts(id))
 },[id])
 
 
-    console.log(details)
     return(
         <div>
-            <h2>posts</h2>
+            {userPosts.map((post) =><PostForAllUserPosts post={post} key={post.id}/>)}
+            <button>Add new</button>
         </div>
     )
 }
