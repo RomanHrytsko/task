@@ -1,6 +1,7 @@
-import {GET_POSTS} from "../action-types";
+import {GET_POSTS,GET_POST_INFO_BY_ID} from "../action-types";
 
 const initialState ={
+
     posts:[]
 }
 
@@ -9,6 +10,9 @@ export default (state = initialState, action)=> {
         case GET_POSTS: {
 
             return {...state, posts: action.payload}
+        }
+        case GET_POST_INFO_BY_ID:{
+            return {post: action.payload}
         }
 
         default: {

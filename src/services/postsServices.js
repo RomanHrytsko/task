@@ -6,5 +6,8 @@ export class PostsServices{
     getPosts(){
         return this.api.get(this.baseUrl)
     }
+    getPostInfo(id){
+        return this.api.get(this.baseUrl + '/' + id)
+    }
 
 }

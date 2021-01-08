@@ -1,10 +1,11 @@
 import UserComponent from "./UserComponent";
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
+import {Link} from "react-router-dom";
+
+import React, {useEffect} from "react";
 import {getUsers} from "../../redux";
 
-export default function AllUsersComponent (){
-
+export default function AllUsersComponent() {
     const {users} = useSelector(({users: {users}}) => ({users}))
     const dispatch = useDispatch()
 
@@ -12,13 +13,22 @@ export default function AllUsersComponent (){
         dispatch(getUsers())
     }, [dispatch])
 
+
     return (
+
+
         <div>
-            <div className='users-header'>
-            <h1>Users</h1>
-            <button>POSTS</button>
+            <div className='pages-header'>
+                <h1>Users</h1>
+                <Link to={'/postsList'}>
+                    <button> POSTS</button>
+                </Link>
             </div>
-            {users.map((user) => <UserComponent user={user} key={user.id}/>)}
+            {
+                users.map((user) => <UserComponent user={user} key={user.id}/>)
+            }
         </div>
+
+
     );
 }

@@ -8,3 +8,4 @@ export const getUsers = () => async (dispatch) => {
 
     dispatch({type: GET_USERS, payload: json})
 }
+
