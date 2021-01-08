@@ -1,19 +1,17 @@
-import {GET_POSTS,GET_POST_INFO_BY_ID} from "../action-types";
+import {GET_POSTS} from "../action-types";
 
-const initialState ={
+const initialState = {
 
-    posts:[]
+    posts: []
 }
 
-export default (state = initialState, action)=> {
+export default (state = initialState, action) => {
     switch (action.type) {
         case GET_POSTS: {
 
             return {...state, posts: action.payload}
         }
-        case GET_POST_INFO_BY_ID:{
-            return {post: action.payload}
-        }
+
 
         default: {
             return state

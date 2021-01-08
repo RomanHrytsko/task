@@ -6,22 +6,13 @@ import {getPostInfoById} from "../../redux";
 const PostWithDetail = ({match,post:{userId, id, title, body}}) => {
 const dispatch = useDispatch()
 
-    // useEffect(()=>{
-    //     dispatch(getPostInfoById(id))
-    // })
-    useEffect(()=>{
-        dispatch(getPostInfoById(id))
-    })
 
     return(
         <div>
-
-            <h4>UserId: {userId}</h4>
             <h4>Id: {id}</h4>
-            <h4>title: {title}</h4>
             <h4>body: {body}</h4>
             <div className={'PostDetailsButtons'}>
-               <Link to={'/userDetails'}>
+               <Link to={'/userDetails' + '/' + id}>
                 <button>Details</button>
                </Link>
             </div>

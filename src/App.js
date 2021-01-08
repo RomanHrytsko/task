@@ -9,6 +9,7 @@ import HomePage from "./components/HomePage/HomePage";
 import Posts from "./components/Posts/AllPostsWithDetails";
 import UserDetail from "./components/Details/UserDetails";
 import PostWithDetail from "./components/Posts/PostWithDetails";
+import AllPostsWistDetails from "./components/Posts/AllPostsWithDetails";
 
 class App extends Component {
     render() {
@@ -22,16 +23,16 @@ class App extends Component {
     <Route exact path={'/404'} render={() =>{
         return <Error/>
     }}/>
+    <Route exact  path={'/posts'} render={() =>{
+        return <AllPostsWistDetails/>
+    }}/>
     <Route exact path={'/postsList'} render={()=>{
         return <AllPostsComponent/>
     }}/>
     <Route exact path={'/users'} render={() =>{
         return <AllUsersComponent/>
     }}/>
-    <Route exact path={'/posts'} render={() =>{
-        return <Posts/>
-    }}/>
-    <Route exact path={'/userDetails'} render={() =>{
+    <Route exact path={'/userDetails/:id'} render={() =>{
         return <UserDetail/>
     }}/>
     <Redirect to={'/404'}/>

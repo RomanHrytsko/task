@@ -7,8 +7,3 @@ export const getPost = () => async (dispatch) => {
     const json = await response.json()
     dispatch({type: GET_POSTS, payload: json})
 }
-export const getPostInfoById = (id) => async (dispatch) =>{
-    const response = await postsService.getPostInfo(id)
-    const json = await response.json()
-    dispatch({type: GET_POST_INFO_BY_ID, payload:json})
-}
