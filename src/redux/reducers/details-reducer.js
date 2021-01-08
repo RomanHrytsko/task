@@ -9,7 +9,7 @@ export default (state = initialState, action)=> {
     switch (action.type) {
 
         case GET_POST_INFO_BY_ID:{
-            return {details: action.payload}
+            return {...state,details: action.payload}
         }
 
         default: {

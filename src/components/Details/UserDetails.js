@@ -7,9 +7,9 @@ const UserDetail = ({match,match:{params:{id}}}) =>{
     const {details} = useSelector(({details:{details}}) =>({details}))
     const dispatch = useDispatch()
     useEffect(()=>{
-       dispatch(getPostInfoById(details.userId))
+       dispatch(getPostInfoById(id))
 
-    },[details.userId])
+    },[id])
 
     console.log(details)
     return (

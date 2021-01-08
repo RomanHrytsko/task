@@ -10,6 +10,7 @@ import Posts from "./components/Posts/AllPostsWithDetails";
 import UserDetail from "./components/Details/UserDetails";
 import PostWithDetail from "./components/Posts/PostWithDetails";
 import AllPostsWistDetails from "./components/Posts/AllPostsWithDetails";
+import AllUserPosts from "./components/Posts/AllUserPosts";
 
 class App extends Component {
     render() {
@@ -34,6 +35,9 @@ class App extends Component {
     }}/>
     <Route exact path={'/userDetails/:id'} render={() =>{
         return <UserDetail/>
+    }}/>
+    <Route exact path={'/posts/userId:id'} render={() =>{
+        return <AllUserPosts/>
     }}/>
     <Redirect to={'/404'}/>
 </Switch>
