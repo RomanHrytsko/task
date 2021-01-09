@@ -17,10 +17,27 @@ header a{
 header a:hover{
     color: whitesmoke;
 }
+h1{
+    padding: 20px 40px;
+    border: 1px solid black;
+}
+.pages-main-block{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .pages-header {
     display: flex;
     align-items: center;
     justify-content: center;
+    /*background-color: whitesmoke;*/
+    padding-top: 30px;
+}
+.pages-header h2{
+    padding: 20px 40px;
+    border: 1px solid black;
 }
 
 .pages-header button {
@@ -28,4 +45,108 @@ header a:hover{
     margin-top: 11px;
     width: 107px;
     height: 39px;
+}
+.pages-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    /*background-color: whitesmoke;*/
+}
+.info-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 90px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+
+
+
+
+
+}
+
+.info-block button{
+    margin-top: 10px;
+height: 32px;
+    width: 100px;
+    border-radius: 9px;
+    border: 1px solid black;
+
+}
+.info-block button:hover{
+    background-color: yellow;
+    transition: background-color 0.7s;
+}
+
+.full-post-info-block{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 90%;
+    padding: 30px 20px;
+
+}
+.comments-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+
+}
+.buttons-block{
+    margin-top: 10px;
+}
+.edit-btn{
+    margin-top: 10px;
+    height: 32px;
+    width: 100px;
+    border-radius: 9px;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+.edit-btn:hover{
+    background-color: #BA71BA;
+    transition: background-color 0.7s;
+}
+.delete-btn{
+    margin-top: 10px;
+    height: 32px;
+    width: 100px;
+    border-radius: 9px;
+    border: 1px solid black;
+}
+.delete-btn:hover{
+  background-color: #E15151;
+    transition: background-color 0.7s;
+}
+.addNew-btn{
+    margin: 20px 0;
+    height: 32px;
+    width: 30%;
+    border-radius: 9px;
+    border: 1px solid black;
+}
+.addNew-btn:hover{
+    background-color: #82EB52;
+    transition: background-color 0.7s;
 }

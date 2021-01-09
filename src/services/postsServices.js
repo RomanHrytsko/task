@@ -3,11 +3,12 @@ export class PostsServices{
         this.api = httpClient
         this.baseUrl = 'https://jsonplaceholder.typicode.com/posts'
     }
-    getPosts(){
-        return this.api.get(this.baseUrl)
-    }
+
     getPostInfo(id){
         return this.api.get(this.baseUrl + '/' + id)
+    }
+    getUserPosts(id){
+        return this.api.get(this.baseUrl + '?userId=' +id)
     }
 
 }

@@ -10,8 +10,6 @@ export default (state = initialState, action) =>{
             return{
                 ...state, userPosts: action.payload
             }
-
-
         }
         default: return state
     }

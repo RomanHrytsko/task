@@ -5,16 +5,16 @@ export default function UserComponent ({user: {id,name,username,email,address:{s
 
 
     return (
-        <div>
-            <div>
+        <div className='info-block'>
 
-            <h4>ID: {id}</h4>
-            <h4>Name: {name}</h4>
+
+
+            <h4>{name}</h4>
                 <Link to={`/posts/userId${id}`}>
-                <button>POSTS</button>
+                <button>Posts</button>
                 </Link>
-            </div>
-            <hr/>
+
+
 
         </div>
     );

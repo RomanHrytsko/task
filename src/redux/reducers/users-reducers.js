@@ -1,4 +1,4 @@
-import {GET_USERS,GET_USER_POSTS_API} from "../action-types";
+import {GET_USERS} from "../action-types";
 
 const initialState ={
     users:[]
@@ -10,16 +10,6 @@ export default (state = initialState, action)=> {
 
             return {...state, users: action.payload}
         }
-        // case GET_USER_POSTS_API:{
-        //
-        //    const userId = state.users.filter((el)=> el.userId !== action.payload.userId)
-        //
-        //     if(state.users.userId === action.payload.userId){
-        //         userId.push(action.payload)
-        //     }
-        //
-        //     return {...state, users: userId}
-        // }
 
         default: {
             return {...state}
