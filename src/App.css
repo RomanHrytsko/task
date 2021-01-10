@@ -150,3 +150,34 @@ height: 32px;
     background-color: #82EB52;
     transition: background-color 0.7s;
 }
+.modal-window{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition:0.5s ;
+
+}
+.modal-window.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-window-content{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
