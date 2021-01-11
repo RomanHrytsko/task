@@ -6,6 +6,8 @@ const PostsForAllUserPosts = ({ post: {userId, id, title, body}}) => {
     return (
         <div className='info-block'>
             <h3>Post №{id}</h3>
+            <h3>Body: {body}</h3>
+            <h3>Title: {title}</h3>
             <Link to={`/comments/postId${id}`}>
             <button>Details</button>
             </Link>

@@ -1,4 +1,4 @@
-import {GET_POST_INFO_BY_ID} from "../action-types";
+import {DELETE_POST, EDIT_POST, GET_POST_INFO_BY_ID} from "../action-types";
 
 const initialState ={
 
@@ -11,9 +11,21 @@ export default (state = initialState, action)=> {
         case GET_POST_INFO_BY_ID:{
             return {...state,details: action.payload}
         }
+        case EDIT_POST: {
+
+
+            return {
+                ...state, details: action.payload
+            }
+        }
+        case DELETE_POST: {
+            return {
+                ...state, details: action.payload
+            }
+        }
 
         default: {
             return state
-        } //TODO create error
+        }
     }
 }

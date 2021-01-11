@@ -21,6 +21,23 @@ h1{
     padding: 20px 40px;
     border: 1px solid black;
 }
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+form input{
+    width: 400px;
+    padding: 40px 10px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: whitesmoke;
+}
+form input:hover{
+    background-color: white;
+    transition: background-color 0.7s;
+}
 .pages-main-block{
     background-color: whitesmoke;
     display: flex;
@@ -60,7 +77,7 @@ h1{
     align-items: center;
     flex-direction: column;
     width: 50%;
-    height: 90px;
+    padding: 30px 20px;
     background-color: white;
     border-radius: 20px;
     margin-top: 20px;
@@ -110,39 +127,65 @@ height: 32px;
     background-color: white;
     border-radius: 20px;
     margin-top: 20px;
+    margin-bottom: 30px;
     border: 1px solid black;
 
 }
 .buttons-block{
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+
 }
 .edit-btn{
-    margin-top: 10px;
     height: 32px;
     width: 100px;
     border-radius: 9px;
     border: 1px solid black;
     margin-right: 20px;
 }
+.post-btn{
+    margin-right:  10px;
+    height: 32px;
+    width: 100px;
+    border-radius: 9px;
+    border: 1px solid black;
+}
+.post-btn:hover{
+    background-color: #82EB52;
+    transition: background-color 0.7s;
+}
 .edit-btn:hover{
     background-color: #BA71BA;
     transition: background-color 0.7s;
 }
 .delete-btn{
-    margin-top: 10px;
     height: 32px;
     width: 100px;
     border-radius: 9px;
     border: 1px solid black;
+}
+
+.addNewPostBtn{
+    margin:  20px;
+    height: 32px;
+    width: 50%;
+    border-radius: 9px;
+    border: 1px solid black;
+}
+.addNewPostBtn:hover{
+    background-color: #82EB52;
+    transition: background-color 0.7s;
 }
 .delete-btn:hover{
   background-color: #E15151;
     transition: background-color 0.7s;
 }
 .addNew-btn{
-    margin: 20px 0;
+    margin-right: 10px ;
     height: 32px;
-    width: 30%;
+    width: 100px;
     border-radius: 9px;
     border: 1px solid black;
 }
@@ -181,3 +224,4 @@ height: 32px;
 
 
 }
+

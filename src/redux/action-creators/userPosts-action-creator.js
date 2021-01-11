@@ -7,3 +7,4 @@ export const getUserPosts = (id) => async (dispatch)=>{
     const json = await response.json()
     dispatch({type:GET_USER_POSTS, payload:json})
 }
+

@@ -4,9 +4,12 @@ import {withRouter} from 'react-router-dom'
 import {ADD_NEW_POST, CLOSE_MODAL_WINDOW, getUserPosts, OPEN_MODAL_WINDOW} from "../../redux";
 import PostForAllUserPosts from "./EachUserPostComponent";
 import ModalWindow from "../ModalWindow/ModalWindowComponent";
-import Test from "../Test/Test";
+import {ReduxForm} from "../ModalWindow/Form";
+
 
 const AllUsersPosts = ({match: {params: {id}}}) => {
+
+
     const dispatch = useDispatch()
     const {userPosts, modalWindow} = useSelector(({userPosts: {userPosts}, modalWindow: {modalWindow}}) => ({
         userPosts,
@@ -26,12 +29,17 @@ const AllUsersPosts = ({match: {params: {id}}}) => {
             </div>
             <div className='pages-body'>
                 {userPosts.map((post) => <PostForAllUserPosts post={post} key={post.id}/>)}
-                <button onClick={() => openModalWindow()} className='addNew-btn'>Add new</button>
+                <button onClick={() => openModalWindow()} className='addNewPostBtn'>Add new post</button>
             </div>
-            <ModalWindow open={modalWindow} close={closeModalWindow} />
+            <ModalWindow open={modalWindow} close={closeModalWindow}>
+                <h1>Add new Post</h1>
+                <div className='inputs-block'>
+                    <ReduxForm />
+                </div>
+            </ModalWindow>
 
 
-            <Test/>
+
 
         </div>
     )
